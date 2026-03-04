@@ -1,0 +1,62 @@
+[
+    {
+        "id": "sandino_theme",
+        "name": "Tema Rojo y Negro",
+        "description": "Tema clásico de Sandino - Ya es tuyo",
+        "price": 0,
+        "type": "theme",
+        "icon": "🔴⚫",
+        "colors": {
+            "primary": "#8B0000",
+            "secondary": "#F4E4BC",
+            "accent": "#D4AF37",
+            "bg": "#222"
+        }
+    },
+    {
+        "id": "blue_white_theme",
+        "name": "Tema Azul y Blanco",
+        "description": "Colores de la bandera nicaragüense",
+        "price": 100,
+        "type": "theme",
+        "icon": "🇳🇮",
+        "colors": {
+            "primary": "#0047AB",
+            "secondary": "#FFFFFF",
+            "accent": "#4A90E2",
+            "bg": "#F5F7FA"
+        }
+    },
+    {
+        "id": "sandino_hat",
+        "name": "Sombrero de Sandino",
+        "description": "El icónico sombrero del General",
+        "price": 50,
+        "type": "accessory",
+        "icon": "🎩"
+    },
+    {
+        "id": "sandino_bandana",
+        "name": "Pañuelo Rojo y Negro",
+        "description": "Los colores de la resistencia",
+        "price": 30,
+        "type": "accessory",
+        "icon": "🔴"
+    },
+    {
+        "id": "rifle",
+        "name": "Rifle de Guerrillero",
+        "description": "Símbolo de la lucha armada",
+        "price": 75,
+        "type": "accessory",
+        "icon": "🔫"
+    },
+    {
+        "id": "gold_frame",
+        "name": "Marco Dorado",
+        "description": "Borde elegante para tu perfil",
+        "price": 60,
+        "type": "decoration",
+        "icon": "✨"
+    }
+]

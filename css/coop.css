@@ -1,0 +1,132 @@
+/* =========================================
+   10. COOPERATIVE MODE
+   ========================================= */
+.coop-ui-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: var(--glass-bg);
+    padding: 20px 40px;
+    border-radius: 20px;
+    border: 3px solid var(--color-accent);
+    box-shadow: var(--shadow-hard);
+    margin: 20px auto;
+    width: fit-content;
+    position: relative;
+    z-index: 10;
+}
+
+.player-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    opacity: 0.6;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: rgba(255, 255, 255, 0.05);
+    min-width: 140px;
+    border: 2px solid transparent;
+}
+
+.player-pill.p1 {
+    border-bottom: 5px solid #ff4444;
+}
+
+.player-pill.p2 {
+    border-bottom: 5px solid #4444ff;
+}
+
+.player-pill.active {
+    opacity: 1;
+    transform: scale(1.15);
+    background: var(--color-secondary);
+    box-shadow: 0 0 30px rgba(var(--color-accent-rgb), 0.4);
+    border-color: var(--color-accent);
+}
+
+.player-pill.p1.active {
+    color: #8B0000;
+}
+
+.player-pill.p2.active {
+    color: #0047AB;
+}
+
+.player-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.2));
+}
+
+.vs-indicator {
+    font-family: 'Bangers', cursive;
+    color: var(--color-accent);
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    transform: rotate(-10deg);
+}
+
+.menu-divider {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 15px;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.9) translateX(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translateX(-50%);
+        opacity: 1;
+    }
+}
+
+.ui-panel {
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.comic-container {
+    border: 8px solid #000;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8), 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.switching {
+    animation: turnPulse 0.5s ease-out;
+}
+
+@keyframes turnPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(var(--color-accent-rgb), 0);
+    }
+
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 40px var(--color-accent);
+    }
+
+    100% {
+        transform: scale(1.15);
+        box-shadow: 0 0 30px rgba(var(--color-accent-rgb), 0.4);
+    }
+}
+
+.char-portrait.placeholder {
+    width: 60px;
+    height: 60px;
+    background: var(--color-accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 3px solid white;
+    margin-right: 15px;
+}

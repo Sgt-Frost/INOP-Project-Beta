@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia e Identidad de Nicaragua | Cómic Interactivo</title>
+
+    <!-- Meta tags for SEO & Sharing -->
+    <meta name="description"
+        content="Una experiencia interactiva y educativa sobre la historia de Nicaragua. Explora capítulos, toma decisiones y descubre nuestra identidad.">
+    <meta name="theme-color" content="#1a237e"> <!-- Example primary color -->
+
+    <!-- Fonts: Using Google Fonts for High Quality Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Bangers&family=Comic+Neue:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile-achievements.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+
+    <!-- Main App Container -->
+    <main id="app">
+
+        <!-- Hamburger Menu Toggle Button -->
+        <button class="hamburger-toggle" id="hamburger-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-icon"></span>
+        </button>
+
+        <!-- Accordion Navigation Menu -->
+        <nav class="floating-menu" id="floating-menu" aria-label="Main navigation">
+            <div class="menu-items">
+                <button id="btn-home" class="menu-btn">🏠 Inicio</button>
+                <button id="btn-start-adventure" class="menu-btn primary">📖 Historia</button>
+                <div class="menu-divider"></div>
+                <button id="btn-start-trivia" class="menu-btn">🎯 Trivia Individual</button>
+                <button id="btn-start-coop" class="menu-btn">👥 Trivia Cooperativa</button>
+                <div class="menu-divider"></div>
+                <button id="btn-profile" class="menu-btn">👤 Perfil</button>
+                <button id="btn-shop" class="menu-btn">🛒 Tienda</button>
+                <button id="btn-achievements" class="menu-btn">🏆 Logros</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Loading Screen -->
+            <section id="loading-view" class="view hidden">
+                <div class="loader-content">
+                    <h1>Cargando Historia de Nicaragua...</h1>
+                    <div class="spinner"></div>
+                </div>
+            </section>
+
+            <!-- Home / Historical Map View -->
+            <section id="home-view" class="view">
+                <div class="home-bg-overlay"></div>
+                <header class="hero">
+                    <h1>Sandino: General de Hombres Libres</h1>
+                    <p class="subtitle">La lucha por la soberanía y la dignidad nacional</p>
+                </header>
+
+                <div id="timeline-container" class="timeline-wrapper">
+                    <h2 style="text-align: center; color: var(--color-accent); margin-bottom: 30px;">Línea Temporal de
+                        Sandino</h2>
+                    <div id="historical-timeline" class="timeline">
+                        <div class="timeline-line"></div>
+                        <!-- Timeline nodes will be injected here by JS -->
+                    </div>
+                </div>
+
+                <div id="chapter-selection-section" class="chapter-selection-container">
+                    <h2 class="section-title">Selecciona tu Capítulo</h2>
+                    <div id="chapter-grid" class="chapter-grid">
+                        <!-- Chapter cards will be injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comic / Story View -->
+            <section id="comic-view" class="view hidden">
+                <div id="scene-container" class="comic-container">
+                    <div id="scene-background" class="full-bg"></div>
+                    <div id="character-stage" class="character-area">
+                        <!-- Character sprites will go here -->
+                    </div>
+
+
+                    <div id="choices-overlay" class="choices-panel hidden">
+                        <h3>¿Qué decisión tomará el General?</h3>
+                        <div id="choices-list" class="choice-grid">
+                            <!-- Choice buttons will be injected here -->
+                        </div>
+                    </div>
+
+                    <div id="dialogue-box" class="ui-panel bubble-neutral">
+                        <div id="char-portrait-square" class="char-portrait-box-mini">
+                            <!-- Square Portrait will be injected here -->
+                        </div>
+                        <div class="bubble-tail"></div>
+                        <div class="dialogue-content">
+                            <h4 id="char-name">Nombre</h4>
+                            <p id="dialogue-text">Texto del diálogo...</p>
+                        </div>
+                        <button id="btn-next-dialogue" class="next-btn">Siguiente</button>
+                    </div>
+
+                    <!-- Hidden File Input for Custom Uploads -->
+                    <input type="file" id="story-file-input" class="hidden" accept="image/*">
+                </div>
+            </section>
+
+            <!-- Trivia View -->
+            <section id="trivia-view" class="view hidden">
+                <div class="trivia-container">
+                    <div class="trivia-header">
+                        <h2>Desafío Histórico</h2>
+                        <div id="individual-score" class="score-pill">Puntos: <span id="trivia-score">0</span></div>
+
+                        <!-- Cooperative Score Display -->
+                        <div id="coop-status" class="coop-ui-panel hidden">
+                            <div class="player-pill p1 active" id="player1-pill">
+                                <span class="player-icon">👤</span>
+                                <div class="player-info">
+                                    <span class="player-label">Jugador 1</span>
+                                    <span id="p1-score" class="player-score">0</span>
+                                </div>
+                            </div>
+                            <div class="vs-indicator">VS</div>
+                            <div class="player-pill p2" id="player2-pill">
+                                <span class="player-icon">👤</span>
+                                <div class="player-info">
+                                    <span class="player-label">Jugador 2</span>
+                                    <span id="p2-score" class="player-score">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trivia-card">
+                        <h3 id="trivia-question">¿Cargando pregunta?</h3>
+                        <div id="trivia-options" class="options-grid">
+                            <!-- Options will be injected here -->
+                        </div>
+
+                        <div id="trivia-feedback" class="feedback-panel hidden">
+                            <h3 id="feedback-title">¡Correcto!</h3>
+                            <p id="feedback-text">Explicación histórica...</p>
+                            <button id="btn-next-trivia" class="btn-primary">Siguiente Pregunta</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Profile View -->
+            <section id="profile-view" class="view hidden">
+                <div class="profile-container">
+                    <h2>Hoja de Servicio</h2>
+                    <div class="profile-card">
+                        <div class="avatar-container">
+                            <div class="avatar-base">
+                                <span class="avatar-icon">👤</span>
+                                <div id="avatar-accessories" class="avatar-accessories"></div>
+                            </div>
+                            <p class="avatar-label">Comandante</p>
+                        </div>
+
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-header">
+                                    <span class="stat-label">Coraje</span>
+                                    <span id="courage-value" class="stat-value">0</span>
+                                </div>
+                                <div class="stat-bar">
+                                    <div id="courage-bar" class="stat-fill"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header">
+                                    <span class="stat-label">Sabiduría</span>
+                                    <span id="wisdom-value" class="stat-value">0</span>
+                                </div>
+                                <div class="stat-bar">
+                                    <div id="wisdom-bar" class="stat-fill"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header">
+                                    <span class="stat-label">Diplomacia</span>
+                                    <span id="diplomacy-value" class="stat-value">0</span>
+                                </div>
+                                <div class="stat-bar">
+                                    <div id="diplomacy-bar" class="stat-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-summary">
+                            <h3 id="chapters-completed">Capítulos: 0/5</h3>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Achievements View -->
+            <section id="achievements-view" class="view hidden">
+                <div class="achievements-container">
+                    <h2>Logros Desbloqueados</h2>
+                    <div id="achievements-grid" class="achievements-grid"></div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Shop View -->
+            <section id="shop-view" class="view hidden">
+                <div class="shop-container">
+                    <h2>Tienda de Sandino</h2>
+                    <div class="currency-display">
+                        <span class="currency-icon">💰</span>
+                        <span id="player-currency">0</span> Puntos
+                    </div>
+                    <div id="shop-items-grid" class="shop-grid"></div>
+                </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Global Audio Elements -->
+        <!-- IDs allow JS to control playback easily -->
+        <audio id="bgm-player" loop></audio> <!-- Background Music -->
+        <audio id="sfx-player"></audio> <!-- Sound Effects -->
+
+        <!-- Modal: Settings (Volume, Text Size) -->
+        <dialog id="settings-modal">
+            <h2>Ajustes</h2>
+            <label>
+                Música
+                <input type="range" id="vol-bgm" min="0" max="1" step="0.1" value="0.5">
+            </label>
+            <label>
+                Efectos
+                <input type="range" id="vol-sfx" min="0" max="1" step="0.1" value="0.7">
+            </label>
+            <button id="btn-close-settings">Cerrar</button>
+        </dialog>
+
+        <!-- Scripts -->
+        <!-- Type="module" allows using import/export syntax in JS files -->
+        <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>

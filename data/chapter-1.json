@@ -1,0 +1,163 @@
+{
+    "id": "chapter-1",
+    "title": "La Chispa: Benjamín Zeledón",
+    "scenes": [
+        {
+            "id": "scene-01",
+            "background": "PON_TU_FONDO_AQUÍ (ej: assets/images/mi_fondo.jpg)",
+            "mood": "rural",
+            "characters": [
+                {
+                    "name": "Sandino Joven",
+                    "image": "INSÉRTALA_AQUÍ (ej: assets/images/personaje.jpg)",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "1912. Niquinohomo. Augusto Nicolás Calderón Sandino tiene apenas 17 años."
+                },
+                {
+                    "speaker": "Sandino Joven",
+                    "text": "El ruido de las carretas y los soldados invasores llena las calles. Dicen que han matado al General Zeledón."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Acercarse a la multitud.",
+                    "nextSceneId": "scene-02-body",
+                    "effect": {
+                        "courage": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-02-body",
+            "background": "assets/images/scenes/zeledon_body.jpg",
+            "mood": "war",
+            "characters": [
+                {
+                    "name": "Sandino Joven",
+                    "image": "assets/images/characters/sandino_shocked.png",
+                    "position": "left"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "En una carreta tirada por bueyes, yace el cuerpo inerte del General Benjamín Zeledón."
+                },
+                {
+                    "speaker": "Sandino Joven",
+                    "text": "¡Lo llevan como un trofeo! Los invasores gringos y los vendepatria lo exhiben para asustarnos."
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Sandino observa el rostro sereno del héroe caído, a pesar humillación."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Sentir miedo por el poder del invasor.",
+                    "nextSceneId": "scene-03-fear",
+                    "effect": {
+                        "courage": -1
+                    }
+                },
+                {
+                    "text": "Sentir indignación y rabia.",
+                    "nextSceneId": "scene-03-anger",
+                    "effect": {
+                        "courage": 2,
+                        "patriotism": 2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-03-fear",
+            "background": "PON_TU_FONDO_AQUÍ (ej: assets/images/mi_fondo.jpg)",
+            "characters": [
+                {
+                    "name": "Sandino Joven",
+                    "image": "assets/images/characters/sandino_young.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Sandino Joven",
+                    "text": "Son demasiados... Tienen armas que nunca hemos visto. ¿Quién podrá detenerlos?"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "El miedo es natural, pero la semilla de la duda ha sido plantada. Nicaragua no es libre."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Jurar que esto no quedará así.",
+                    "nextSceneId": "scene-04-resolve",
+                    "effect": {
+                        "wisdom": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-03-anger",
+            "background": "assets/images/scenes/eyes_closeup.jpg",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Sandino Joven",
+                    "text": "Zeledón murió por no rendirse. Murió por nuestra soberanía. Su muerte no es una derrota, es una semilla."
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Ese día, Augusto juró en silencio que la sangre de Zeledón no sería en vano."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Guardar este momento en el corazón.",
+                    "nextSceneId": "scene-04-resolve",
+                    "effect": {
+                        "wisdom": 2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-04-resolve",
+            "background": "assets/images/scenes/sunset_mountains.jpg",
+            "mood": "peace",
+            "characters": [
+                {
+                    "name": "Sandino Joven",
+                    "image": "assets/images/characters/sandino_determined.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Sandino Joven",
+                    "text": "Algún día, Nicaragua será libre. Si Zeledón pudo dar su vida, yo también podré dar la mía si es necesario."
+                },
+                {
+                    "speaker": "Sistema",
+                    "text": "Has completado el Capítulo 1. Has presenciado 'La Chispa'."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Volver al Mapa",
+                    "nextSceneId": "END_CHAPTER",
+                    "effect": {}
+                }
+            ]
+        }
+    ]
+}

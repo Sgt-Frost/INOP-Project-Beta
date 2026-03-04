@@ -1,0 +1,103 @@
+{
+    "id": "chapter-5",
+    "title": "El Legado: Traición y Eternidad",
+    "scenes": [
+        {
+            "id": "scene-01",
+            "background": "assets/images/scenes/managua_1933.jpg",
+            "characters": [
+                {
+                    "name": "Sandino Paz",
+                    "image": "assets/images/characters/sandino_peace.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "1933. Los Marines se retiran. Sandino firma la paz con el presidente Sacasa.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Sandino Paz",
+                    "text": "Hemos logrado lo imposible. Nicaragua es libre de la intervención extranjera.",
+                    "portrait": "assets/images/portraits/sandino.jpg"
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Confiar en la paz.",
+                    "nextSceneId": "scene-02-betrayal",
+                    "effect": {
+                        "diplomacy": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-02-betrayal",
+            "background": "assets/images/scenes/managua_night.jpg",
+            "mood": "peace",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "21 de febrero de 1934. Sandino es invitado a una cena en Managua.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Al salir, la Guardia Nacional lo embosca. Anastasio Somoza García ordena su asesinato.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Sandino Paz",
+                    "text": "Muero, pero mi causa vivirá...",
+                    "portrait": "assets/images/portraits/sandino.jpg"
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Recordar su legado.",
+                    "nextSceneId": "scene-03-legacy",
+                    "effect": {
+                        "patriotism": 3
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-03-legacy",
+            "background": "assets/images/scenes/sandino_monument.jpg",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "Sandino fue asesinado, pero su espíritu nunca murió.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Su lucha inspiró generaciones. Su nombre se convirtió en símbolo de dignidad y soberanía.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Hoy, Nicaragua recuerda al General de Hombres Libres.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Sistema",
+                    "text": "¡Has completado la historia de Sandino! Gracias por jugar."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Volver al Mapa",
+                    "nextSceneId": "END_CHAPTER",
+                    "effect": {}
+                }
+            ]
+        }
+    ]
+}

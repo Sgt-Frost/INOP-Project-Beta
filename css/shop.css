@@ -1,0 +1,214 @@
+/* =========================================
+   SHOP VIEW
+   ========================================= */
+#shop-view {
+    background: var(--bg-pattern);
+    padding: 80px 20px 40px;
+}
+
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shop-container h2 {
+    text-align: center;
+    color: var(--color-accent);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.currency-display {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #b89628 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0 auto 2rem;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.currency-icon {
+    font-size: 2rem;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.shop-item-card {
+    background: var(--color-secondary);
+    color: var(--color-bg);
+    /* Dark text on light cards */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--color-accent);
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.shop-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.shop-item-card.owned {
+    opacity: 0.7;
+    border-color: #4CAF50;
+}
+
+.shop-item-card.owned::after {
+    content: "✓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #4CAF50;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.item-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.shop-item-card h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.item-description {
+    color: var(--color-bg);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid var(--color-accent);
+}
+
+.item-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.btn-purchase {
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-purchase:hover:not([disabled]) {
+    background: var(--color-primary);
+    transform: scale(1.05);
+}
+
+.btn-purchase[disabled] {
+    background: #4CAF50;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Theme Preview Swatches */
+.theme-preview {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+.color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+
+/* Apply Theme Button */
+.btn-apply-theme {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-apply-theme:hover:not([disabled]) {
+    background: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.btn-apply-theme[disabled] {
+    background: #4CAF50;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Active Theme Indicator */
+.shop-item-card.active-theme {
+    border-color: #4CAF50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+}
+
+.shop-item-card.active-theme::before {
+    content: "✓ TEMA ACTIVO";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4CAF50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}

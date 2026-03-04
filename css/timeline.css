@@ -1,0 +1,119 @@
+/* =========================================
+   TIMELINE (Chapter Selection)
+   ========================================= */
+.timeline-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4b8 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px var(--color-accent), 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+.timeline {
+    position: relative;
+    padding: 60px 0;
+    min-height: 200px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-node {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.timeline-node-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.timeline-node.locked .timeline-node-circle {
+    background: #666;
+    border-color: #333;
+    color: white;
+    cursor: not-allowed;
+}
+
+.timeline-node.unlocked .timeline-node-circle {
+    background: var(--color-accent);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    animation: timelinePulse 2s infinite;
+}
+
+.timeline-node.completed .timeline-node-circle {
+    background: #4CAF50;
+    border-color: #2E7D32;
+    color: white;
+}
+
+.timeline-node:hover.unlocked .timeline-node-circle,
+.timeline-node:hover.completed .timeline-node-circle {
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-label {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-align: center;
+    max-width: 120px;
+}
+
+.timeline-year {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: var(--color-primary);
+    padding: 4px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes timelinePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "id": "chapter-4",
+    "title": "La Defensa: Guerra de Guerrillas",
+    "scenes": [
+        {
+            "id": "scene-01",
+            "background": "assets/images/scenes/segovias_mountains.jpg",
+            "characters": [
+                {
+                    "name": "Sandino General",
+                    "image": "assets/images/characters/sandino_general.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "1927-1933. Las Segovias. Sandino y su pequeño ejército libran una guerra de guerrillas contra los Marines estadounidenses.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Sandino General",
+                    "text": "Conocemos cada montaña, cada río. Esta es nuestra tierra, y aquí somos invencibles.",
+                    "portrait": "assets/images/portraits/sandino.jpg"
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Planear un ataque nocturno.",
+                    "nextSceneId": "scene-02-attack",
+                    "effect": {
+                        "courage": 2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-02-attack",
+            "background": "assets/images/scenes/night_battle.jpg",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "Bajo el manto de la noche, las tropas sandinistas atacan un campamento enemigo.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Sandino General",
+                    "text": "¡Fuego! ¡Por Nicaragua libre!",
+                    "portrait": "assets/images/portraits/sandino.jpg"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "La táctica de guerrilla frustra a los invasores. No pueden vencer a un pueblo que lucha por su libertad.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Retirarse a El Chipote.",
+                    "nextSceneId": "scene-03-chipote",
+                    "effect": {
+                        "wisdom": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-03-chipote",
+            "background": "assets/images/scenes/battle_hills.jpg",
+            "mood": "war",
+            "characters": [
+                {
+                    "name": "Sandino General",
+                    "image": "assets/images/characters/sandino_general.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Sandino General",
+                    "text": "El Chipote es nuestra fortaleza. Desde aquí, dirigimos la resistencia.",
+                    "portrait": "assets/images/portraits/sandino.jpg"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Los bombardeos aéreos no logran quebrantar el espíritu sandinista.",
+                    "portrait": "assets/images/portraits/narrator.jpg"
+                },
+                {
+                    "speaker": "Sistema",
+                    "text": "Has completado el Capítulo 4."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Volver al Mapa",
+                    "nextSceneId": "END_CHAPTER",
+                    "effect": {}
+                }
+            ]
+        }
+    ]
+}

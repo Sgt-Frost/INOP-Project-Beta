@@ -1,0 +1,204 @@
+/* =========================================
+   HAMBURGER MENU NAVIGATION
+   ========================================= */
+
+/* Hamburger Toggle Button */
+.hamburger-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #b89628 100%);
+    border: 2px solid var(--color-primary);
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.hamburger-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.hamburger-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Hamburger Icon Lines */
+.hamburger-icon {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+    top: -8px;
+}
+
+.hamburger-icon::after {
+    top: 8px;
+}
+
+/* Hamburger Icon Animation when Open */
+.hamburger-toggle.active .hamburger-icon {
+    background: transparent;
+}
+
+.hamburger-toggle.active .hamburger-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger-toggle.active .hamburger-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Accordion Menu Container */
+.floating-menu {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--color-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--color-accent);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-20px);
+    min-width: 200px;
+}
+
+.floating-menu.open {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu Items Container */
+.menu-items {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Menu Buttons */
+.menu-btn {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-accent);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.6);
+    background: var(--color-accent);
+    color: white;
+}
+
+.menu-btn:active {
+    transform: translateX(3px) scale(0.98);
+}
+
+.menu-btn.primary {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #b89628 100%);
+    color: white;
+    font-size: 1.1rem;
+    border: 2px solid #b89628;
+}
+
+.menu-btn.primary:hover {
+    transform: translateX(5px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.8);
+}
+
+/* Accordion Animation Keyframes */
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+/* Responsive: Adjust for mobile */
+@media (max-width: 768px) {
+    .hamburger-toggle {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .floating-menu {
+        top: 70px;
+        right: 15px;
+        left: 15px;
+        min-width: auto;
+    }
+
+    .menu-btn {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .menu-btn.primary {
+        font-size: 1rem;
+    }
+}

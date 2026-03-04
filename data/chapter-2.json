@@ -1,0 +1,164 @@
+{
+    "id": "chapter-2",
+    "title": "Conciencia: México y las Minas",
+    "scenes": [
+        {
+            "id": "scene-01",
+            "background": "assets/images/scenes/mexico_oilfield.jpg",
+            "mood": "industrial",
+            "characters": [
+                {
+                    "name": "Sandino Obrero",
+                    "image": "assets/images/characters/sandino_worker.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "1923. Tampico, México. Sandino trabaja en la Huasteca Petroleum Company."
+                },
+                {
+                    "speaker": "Sandino Obrero",
+                    "text": "Aquí, entre máquinas y petróleo, veo cómo las empresas extranjeras explotan nuestra tierra y a nuestra gente."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Hablar con otros obreros sobre la injusticia.",
+                    "nextSceneId": "scene-02-debate",
+                    "effect": {
+                        "leadership": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-02-debate",
+            "background": "assets/images/scenes/worker_canteen.jpg",
+            "characters": [
+                {
+                    "name": "Obrero Mexicano",
+                    "image": "assets/images/characters/worker_mexican.png",
+                    "position": "left"
+                },
+                {
+                    "name": "Sandino Obrero",
+                    "image": "assets/images/characters/sandino_worker.png",
+                    "position": "right"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Obrero Mexicano",
+                    "text": "Oye nica, ¿por qué permitís que los gringos manden en tu país? Nosotros los sacamos a patadas."
+                },
+                {
+                    "speaker": "Sandino Obrero",
+                    "text": "No todos los nicaragüenses somos vendepatrias. Algunos guardamos la dignidad en el corazón."
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Las discusiones sobre soberanía y revolución encienden la mente de Sandino."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Sentir vergüenza por la situación de Nicaragua.",
+                    "nextSceneId": "scene-03-shame",
+                    "effect": {
+                        "patriotism": -1
+                    }
+                },
+                {
+                    "text": "Defender el honor de Nicaragua con argumentos.",
+                    "nextSceneId": "scene-03-pride",
+                    "effect": {
+                        "patriotism": 2,
+                        "wisdom": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-03-shame",
+            "background": "assets/images/scenes/worker_canteen.jpg",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Sandino Obrero",
+                    "text": "Tienen razón. Mi país está humillado. ¿Qué puedo hacer yo, un simple mecánico?"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "La duda persiste, pero el deseo de cambio crece."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Seguir trabajando y ahorrar dinero.",
+                    "nextSceneId": "scene-04-return",
+                    "effect": {
+                        "wealth": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-03-pride",
+            "background": "assets/images/scenes/sandino_thinking.jpg",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Sandino Obrero",
+                    "text": "Si en Nicaragua hubiera cien hombres que la amaran tanto como yo, nuestra nación restauraría su soberanía absoluta."
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Sandino comprende que no basta con quejarse. Debe actuar."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Decidir volver a Nicaragua para luchar.",
+                    "nextSceneId": "scene-04-return",
+                    "effect": {
+                        "courage": 2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-04-return",
+            "background": "assets/images/scenes/ship_veracruz.jpg",
+            "characters": [
+                {
+                    "name": "Sandino Determinado",
+                    "image": "assets/images/characters/sandino_hat.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "1926. Sandino renuncia a su trabajo y toma sus ahorros. Compra armas y regresa a su patria."
+                },
+                {
+                    "speaker": "Sandino Determinado",
+                    "text": "Vuelvo no a buscar riqueza, sino a buscar la libertad de mi pueblo."
+                },
+                {
+                    "speaker": "Sistema",
+                    "text": "Has completado el Capítulo 2."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Volver al Mapa",
+                    "nextSceneId": "END_CHAPTER",
+                    "effect": {}
+                }
+            ]
+        }
+    ]
+}

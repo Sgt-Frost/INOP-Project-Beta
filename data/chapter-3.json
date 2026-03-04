@@ -1,0 +1,163 @@
+{
+    "id": "chapter-3",
+    "title": "La Rebelión: El Espino Negro",
+    "scenes": [
+        {
+            "id": "scene-01",
+            "background": "assets/images/scenes/espino_negro_camp.jpg",
+            "characters": [
+                {
+                    "name": "Moncada",
+                    "image": "assets/images/characters/moncada.png",
+                    "position": "left"
+                },
+                {
+                    "name": "Sandino General",
+                    "image": "assets/images/characters/sandino_general.png",
+                    "position": "right"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Narrador",
+                    "text": "4 de mayo de 1927. Tipitapa. Bajo la sombra de un Espino Negro."
+                },
+                {
+                    "speaker": "Moncada",
+                    "text": "Sandino, todo ha terminado. Los Estados Unidos supervisarán las elecciones. Entreguemos las armas por la paz."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Escuchar la propuesta con escepticismo.",
+                    "nextSceneId": "scene-02-proposal",
+                    "effect": {
+                        "wisdom": 1
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-02-proposal",
+            "background": "assets/images/scenes/espino_negro_camp.jpg",
+            "characters": [
+                {
+                    "name": "Moncada",
+                    "image": "assets/images/characters/moncada.png",
+                    "position": "left"
+                },
+                {
+                    "name": "Sandino General",
+                    "image": "assets/images/characters/sandino_general.png",
+                    "position": "right"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Moncada",
+                    "text": "Nos darán 10 dólares por cada rifle. Es una salida honorable."
+                },
+                {
+                    "speaker": "Sandino General",
+                    "text": "¿Honorable? ¿Vender la soberanía de la patria por unos pesos? ¡Eso es traición!"
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "El resto de los generales liberales aceptan la rendición. Sandino se queda solo con sus hombres."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Aceptar el dinero y retirarse a casa.",
+                    "nextSceneId": "scene-bad-ending",
+                    "effect": {
+                        "honor": -10
+                    }
+                },
+                {
+                    "text": "Negarse rotundamente y marcharse a las montañas.",
+                    "nextSceneId": "scene-03-refusal",
+                    "effect": {
+                        "honor": 5,
+                        "courage": 3
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-bad-ending",
+            "background": "assets/images/scenes/niquinohomo_home.jpg",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Sandino",
+                    "text": "Pude haber vivido tranquilo... pero la historia me olvidará como un cobarde."
+                },
+                {
+                    "speaker": "Sistema",
+                    "text": "Final Alternativo: La sumisión. Intenta de nuevo y lucha por la dignidad."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Reintentar Capítulo",
+                    "nextSceneId": "scene-01",
+                    "effect": {}
+                }
+            ]
+        },
+        {
+            "id": "scene-03-refusal",
+            "background": "assets/images/scenes/segovias_jungle.jpg",
+            "mood": "jungle",
+            "characters": [
+                {
+                    "name": "Sandino General",
+                    "image": "assets/images/characters/sandino_general.png",
+                    "position": "center"
+                }
+            ],
+            "dialogue": [
+                {
+                    "speaker": "Sandino General",
+                    "text": "Yo no me vendo, ni me rindo. Yo quiero patria libre o morir."
+                },
+                {
+                    "speaker": "Narrador",
+                    "text": "Sandino se retira al cerro El Chipote con un puñado de hombres. Nace el Ejército Defensor de la Soberanía Nacional."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Escribir el Manifiesto de San Albino.",
+                    "nextSceneId": "scene-04-manifesto",
+                    "effect": {
+                        "leadership": 2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "scene-04-manifesto",
+            "background": "assets/images/scenes/writing_manifesto.jpg",
+            "characters": [],
+            "dialogue": [
+                {
+                    "speaker": "Sandino General",
+                    "text": "A todos los nicaragüenses: El hombre que de su patria no exige un palmo de tierra para su sepultura, merece ser oído, y no sólo oído, sino también creído."
+                },
+                {
+                    "speaker": "Sistema",
+                    "text": "Has completado el Capítulo 3. La guerra ha comenzado."
+                }
+            ],
+            "choices": [
+                {
+                    "text": "Volver al Mapa",
+                    "nextSceneId": "END_CHAPTER",
+                    "effect": {}
+                }
+            ]
+        }
+    ]
+}

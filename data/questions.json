@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "question": "¿En qué año nació Augusto C. Sandino?",
+        "options": [
+            "1890",
+            "1895",
+            "1900",
+            "1885"
+        ],
+        "correct": 1,
+        "explanation": "Sandino nació el 18 de mayo de 1895 en Niquinohomo, Masaya."
+    },
+    {
+        "id": 2,
+        "type": "multiple_choice",
+        "question": "¿Qué evento presenció Sandino en 1912 que marcó su conciencia política?",
+        "options": [
+            "El cuerpo de Benjamín Zeledón siendo arrastrado",
+            "La firma del tratado Chamorro-Bryan",
+            "La batalla de San Jacinto",
+            "El terremoto de Managua"
+        ],
+        "correct": 0,
+        "explanation": "A los 17 años, vio el cadáver del General Benjamín Zeledón ser exhibido por los invasores, lo que despertó su rechazo a la intervención extranjera."
+    },
+    {
+        "id": 3,
+        "type": "true_false",
+        "question": "Sandino fundó el Ejército Defensor de la Soberanía Nacional de Nicaragua (EDSNN).",
+        "correct": true,
+        "explanation": "Verdadero. Sandino fundó el EDSNN para luchar contra la ocupación estadounidense y defender la soberanía nacional."
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "question": "¿Qué apodo le dieron sus enemigos y la prensa internacional?",
+        "options": [
+            "El General de Hombres Libres",
+            "El Bandolero de las Segovias",
+            "El León de Nicaragua",
+            "El Caudillo del Norte"
+        ],
+        "correct": 1,
+        "explanation": "La prensa estadounidense lo llamaba 'bandolero' para deslegitimar su lucha política, aunque él se autodenominaba 'General de Hombres Libres'."
+    },
+    {
+        "id": 5,
+        "type": "fill_blank",
+        "question": "Sandino respondió a Moncada: 'Yo no me ___, ni me rindo'",
+        "correct": "vendo",
+        "alternatives": [
+            "venda",
+            "vendó"
+        ],
+        "explanation": "Rechazó el Pacto del Espino Negro diciendo 'Yo no me vendo, ni me rindo' y decidió continuar la lucha en las montañas."
+    },
+    {
+        "id": 6,
+        "type": "multiple_choice",
+        "question": "¿En qué ciudad ocurrió la primera gran batalla de Sandino contra los Marines en 1927?",
+        "options": [
+            "Estelí",
+            "Jinotega",
+            "Ocotal",
+            "Matagalpa"
+        ],
+        "correct": 2,
+        "explanation": "La Batalla de Ocotal (16 de julio de 1927) fue el primer enfrentamiento mayor y donde se usó por primera vez la aviación militar en coordinación con tropas de tierra en América."
+    },
+    {
+        "id": 7,
+        "type": "true_false",
+        "question": "Los Marines estadounidenses abandonaron Nicaragua en 1933 debido a la resistencia de Sandino.",
+        "correct": true,
+        "explanation": "Verdadero. La resistencia de Sandino y el costo político de la ocupación llevaron a la retirada de los Marines en 1933."
+    },
+    {
+        "id": 8,
+        "type": "matching",
+        "question": "Relaciona cada evento con su año correspondiente:",
+        "pairs": [
+            {
+                "left": "Nacimiento de Sandino",
+                "right": "1895"
+            },
+            {
+                "left": "Batalla de Ocotal",
+                "right": "1927"
+            },
+            {
+                "left": "Retirada de Marines",
+                "right": "1933"
+            },
+            {
+                "left": "Asesinato de Sandino",
+                "right": "1934"
+            }
+        ],
+        "explanation": "Estos son los eventos clave en la vida de Sandino y la lucha por la soberanía nicaragüense."
+    },
+    {
+        "id": 9,
+        "type": "timeline",
+        "question": "Ordena cronológicamente estos eventos de la vida de Sandino:",
+        "items": [
+            "Asesinato de Sandino",
+            "Batalla de Ocotal",
+            "Nacimiento en Niquinohomo",
+            "Retirada de los Marines"
+        ],
+        "correctOrder": [
+            2,
+            1,
+            3,
+            0
+        ],
+        "explanation": "El orden correcto es: Nacimiento (1895), Batalla de Ocotal (1927), Retirada de Marines (1933), Asesinato (1934)."
+    },
+    {
+        "id": 10,
+        "type": "fill_blank",
+        "question": "Sandino luchó en las montañas de ___.",
+        "correct": "Segovias",
+        "alternatives": [
+            "Las Segovias",
+            "segovias"
+        ],
+        "explanation": "Sandino estableció su base de operaciones en las montañas de Las Segovias, al norte de Nicaragua."
+    },
+    {
+        "id": 11,
+        "type": "true_false",
+        "question": "Sandino aceptó el Pacto del Espino Negro propuesto por Moncada.",
+        "correct": false,
+        "explanation": "Falso. Sandino rechazó el pacto y continuó su lucha armada contra la ocupación estadounidense."
+    },
+    {
+        "id": 12,
+        "type": "multiple_choice",
+        "question": "¿Quién ordenó el asesinato de Sandino en 1934?",
+        "options": [
+            "José María Moncada",
+            "Anastasio Somoza García",
+            "Los Marines estadounidenses",
+            "Juan Bautista Sacasa"
+        ],
+        "correct": 1,
+        "explanation": "Anastasio Somoza García, jefe de la Guardia Nacional, ordenó el asesinato de Sandino el 21 de febrero de 1934."
+    }
+]

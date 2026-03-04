@@ -1,0 +1,38 @@
+{
+    "first_chapter": {
+        "rewardId": "pioneer_badge",
+        "name": "Insignia de Pionero",
+        "type": "decoration",
+        "icon": "🏅"
+    },
+    "mexico_journey": {
+        "rewardId": "mexican_poncho",
+        "name": "Poncho Mexicano",
+        "type": "outfit",
+        "icon": "🧣"
+    },
+    "rebellion_start": {
+        "rewardId": "machete_icon",
+        "name": "Machete de Honor",
+        "type": "decoration",
+        "icon": "⚔️"
+    },
+    "guerrilla_master": {
+        "rewardId": "camo_outfit",
+        "name": "Traje de Camuflaje",
+        "type": "outfit",
+        "icon": "🌿"
+    },
+    "legacy_keeper": {
+        "rewardId": "golden_laurel",
+        "name": "Laureles de Oro",
+        "type": "decoration",
+        "icon": "🌿"
+    },
+    "trivia_master": {
+        "rewardId": "scholar_hat",
+        "name": "Birrete de Erudito",
+        "type": "outfit",
+        "icon": "🎓"
+    }
+}

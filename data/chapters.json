@@ -1,0 +1,42 @@
+[
+  {
+    "id": "chapter-1",
+    "title": "La Chispa",
+    "year": 1912,
+    "description": "Niquinohomo. Un joven Sandino presencia un acto que marcará su destino.",
+    "thumbnail": "assets/images/chapter1-thumb.jpg",
+    "requiredChapter": null
+  },
+  {
+    "id": "chapter-2",
+    "title": "Conciencia",
+    "year": 1923,
+    "description": "México y las Minas. El despertar del pensamiento anti-imperialista.",
+    "thumbnail": "assets/images/chapter2-thumb.jpg",
+    "requiredChapter": "chapter-1"
+  },
+  {
+    "id": "chapter-3",
+    "title": "La Rebelión",
+    "year": 1927,
+    "description": "El Espino Negro. La negativa a entregar las armas.",
+    "thumbnail": "assets/images/chapter3-thumb.jpg",
+    "requiredChapter": "chapter-2"
+  },
+  {
+    "id": "chapter-4",
+    "title": "La Defensa",
+    "year": 1930,
+    "description": "La guerra de guerrillas en las Segovias.",
+    "thumbnail": "assets/images/chapter4-thumb.jpg",
+    "requiredChapter": "chapter-3"
+  },
+  {
+    "id": "chapter-5",
+    "title": "El Legado",
+    "year": 1934,
+    "description": "El sueño de Sandino vive para siempre.",
+    "thumbnail": "assets/images/chapter5-thumb.jpg",
+    "requiredChapter": "chapter-4"
+  }
+]
